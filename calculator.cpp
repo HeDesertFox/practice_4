@@ -1,6 +1,7 @@
 #include <iostream>
-#include <cstdlib> // 包含头文件 cstdlib，用于 atof 函数
-#include <stack>   // 包含头文件 stack，用于操作数栈
+#include <cstdlib>
+#include <cctype>
+#include <stack>
 
 using namespace std;
 
@@ -21,10 +22,39 @@ stack<double> operandStack; // 操作数栈
    - 获取的操作数或操作符的类型
 */
 int getop(char s[]) {
-    // 实现 getop 函数的逻辑
-    // ...
+    int i, c;
 
-    return 0; // 用于示例，实际根据实现填充返回值
+    // 跳过空白字符
+    while ((s[0] = c = getchar()) == ' ' || c == '\t')
+        ;
+
+    s[1] = '\0';
+
+    // 如果不是数字或小数点，返回字符表示的操作符
+    if (!isdigit(c) && c != '.')
+        return c;
+
+    i = 0;
+
+    // 收集整数部分
+    if (isdigit(c)) {
+        while (isdigit(s[++i] = c = getchar()))
+            ;
+    }
+
+    // 收集小数部分
+    if (c == '.') {
+        while (isdigit(s[++i] = c = getchar()))
+            ;
+    }
+
+    s[i] = '\0';
+
+    if (c != EOF) {
+        ungetc(c, stdin); // 将字符放回输入流
+    }
+
+    return NUMBER;
 }
 
 /* 
@@ -60,27 +90,27 @@ int main() {
     while ((type = getop(s)) != EOF) {
         switch (type) {
             case NUMBER:
-                push(atof(s));
+                push(atof(s)); // 将字符串转换为 double 并压入栈
                 break;
             case '+':
-                push(pop() + pop());
+                push(pop() + pop()); // 弹出两个操作数，相加，再压入栈
                 break;
             case '*':
-                push(pop() * pop());
+                push(pop() * pop()); // 弹出两个操作数，相乘，再压入栈
                 break;
             case '-':
                 op2 = pop();
-                push(pop() - op2);
+                push(pop() - op2); // 弹出两个操作数，相减，再压入栈
                 break;
             case '/':
                 op2 = pop();
                 if (op2 != 0.0)
-                    push(pop() / op2);
+                    push(pop() / op2); // 弹出两个操作数，相除，再压入栈
                 else
                     cerr << "Error: Division by zero." << endl;
                 break;
             case '\n':
-                cout << "\tResult: " << pop() << endl;
+                cout << "\tResult: " << pop() << endl; // 输出结果
                 break;
             default:
                 cerr << "Error: Unknown command " << s << endl;
