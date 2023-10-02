@@ -1,0 +1,26 @@
+[
+{
+  "directory": "D:/cpp_test/inv_plsh_calc/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/inv_plsh_calc.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\inv_plsh_calc.dir\\getch.cpp.obj -c D:\\cpp_test\\inv_plsh_calc\\getch.cpp",
+  "file": "D:/cpp_test/inv_plsh_calc/getch.cpp",
+  "output": "CMakeFiles/inv_plsh_calc.dir/getch.cpp.obj"
+},
+{
+  "directory": "D:/cpp_test/inv_plsh_calc/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/inv_plsh_calc.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\inv_plsh_calc.dir\\getop.cpp.obj -c D:\\cpp_test\\inv_plsh_calc\\getop.cpp",
+  "file": "D:/cpp_test/inv_plsh_calc/getop.cpp",
+  "output": "CMakeFiles/inv_plsh_calc.dir/getop.cpp.obj"
+},
+{
+  "directory": "D:/cpp_test/inv_plsh_calc/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/inv_plsh_calc.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\inv_plsh_calc.dir\\main.cpp.obj -c D:\\cpp_test\\inv_plsh_calc\\main.cpp",
+  "file": "D:/cpp_test/inv_plsh_calc/main.cpp",
+  "output": "CMakeFiles/inv_plsh_calc.dir/main.cpp.obj"
+},
+{
+  "directory": "D:/cpp_test/inv_plsh_calc/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/inv_plsh_calc.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\inv_plsh_calc.dir\\stack.cpp.obj -c D:\\cpp_test\\inv_plsh_calc\\stack.cpp",
+  "file": "D:/cpp_test/inv_plsh_calc/stack.cpp",
+  "output": "CMakeFiles/inv_plsh_calc.dir/stack.cpp.obj"
+}
+]
